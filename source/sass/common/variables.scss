@@ -1,11 +1,22 @@
 //Viewports
 $mobile-width: 320px;
-$mobile-width-only: 767px;
 $tablet-width: 768px;
 $desktop-width: 1366px;
 
 //Color
-$primary-color: #2d383f;
-$secondary-color: #ffffff;
+$basic-dark-color: #2d383f;
+$basic-light-color: #ffffff;
+$extra-color: #0266c1;
 
-$primary-button-bg: #0266c1;
+// Screen width
+$mobile-width-max: 767px;
+$tablet-width-min: 768px;
+$tablet-width-max: 1439px;
+$desktop-width-min: 1440px;
+
+// Content width
+$mobile-content-width: 290px;
+$tablet-content-width: 678px;
+$desktop-content-width: 1200px;
+
+$main-font: 'Montserrat', 'Arial', sans-serif;

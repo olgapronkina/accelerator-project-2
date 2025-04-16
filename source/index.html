@@ -9,49 +9,436 @@
 
   <body class="page-body">
     <header class="header" data-test="header">
-      <div class="header__container">
-        <h3 class="visually-hidden">Навигация</h3>
+      <div class="header__main-container">
+        <nav class="header__nav" aria-label="Основная навигация по сайту">
+          <button class="menu-nav__open button" aria-label="Открыть меню">
+            <svg width="26" height="26">
+              <use href="/__spritemap#sprite-menu"></use>
+            </svg>
+          </button>
+          <button
+            class="menu-nav__close button button__hidden"
+            aria-label="Закрыть меню"
+          >
+            <svg width="26" height="26">
+              <use href="/__spritemap#sprite-cross"></use>
+            </svg>
+          </button>
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#tours">Туры</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#training">Обучение</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#about">О нас</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#reviews">Отзывы</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#gallery">Фотографии</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#contacts">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <a
+          class="header__logo-link"
+          href="index.html"
+          aria-label="Логотип LIFETOUR"
+        >
+          <svg width="142" height="42">
+            <use href="/__spritemap#sprite-logotype"></use>
+          </svg>
+        </a>
+
+        <a class="header__phone-link" href="tel:+78000000000"
+          >8 800 000-00-00</a
+        >
       </div>
     </header>
 
     <section class="hero" data-test="hero">
-      <div class="hero__container">
-        <h1 class="hero__title">Захватывающие вершины Кавказа</h1>
+      <h1 class="visually-hidden">Найдите путешествие своей мечты</h1>
+      <div class="hero__swiper swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide slide--caucasus">
+            <div class="swiper-slide-container">
+              <h2>Захватывающие вершины Кавказа</h2>
+              <p>
+                В сопровождении опытных гидов вы пройдёте через потрясающие
+                ландшафты и совершите восход на вершину горы Чегет.
+              </p>
+              <a
+                class="button-link button-small"
+                aria-label="Смотреть тур"
+                href="#tour"
+                >Смотреть тур</a
+              >
+              <ul class="slide__details details">
+                <li class="details__length">6 дней/5 ночей</li>
+                <li class="details__level">Высокая сложность</li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-slide slide slide--kamchatka">
+            <div class="swiper-slide-container">
+              <h2>Невероятная природа Камчатки</h2>
+              <p>
+                Незабываемое приключение, во время которого вы отправитесь
+                в путешествие по одному из самых нетронутых уголков дикой
+                природы&nbsp;в мире.
+              </p>
+              <a
+                class="button-link button-small"
+                aria-label="Смотреть тур"
+                href="#tour"
+                >Смотреть тур</a
+              >
+              <ul class="slide__details details">
+                <li class="details__length">9 дней/10 ночей</li>
+                <li class="details__level">Средняя сложность</li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-slide slide slide--altai">
+            <div class="swiper-slide-container">
+              <h2>Магические пейзажи Алтайского Края</h2>
+              <p>
+                Алтайский трекинг-тур — это захватывающее приключение
+                с посещением магических и захватывающих дух ландшафтов
+                Алтайских гор.
+              </p>
+              <a
+                class="button-link button-small"
+                aria-label="Смотреть тур"
+                href="#tour"
+                >Смотреть тур</a
+              >
+              <ul class="slide__details details">
+                <li class="details__length">8 дней/7 ночей</li>
+                <li class="details__level">Лёгкая сложность</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
       </div>
     </section>
+    <section class="tours" id="tour" data-test="tours">
+      <div class="tours__container container">
+        <div class="tours__title titel-shadow">
+          <p aria-hidden="true">Ближайшие туры</p>
+          <h3>Ближайшие туры</h3>
+        </div>
+        <div class="tours__swiper swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slide slide--elbrus">
+              <div class="slide__container">
+                <div class="slide__info">
+                  <div class="slide__locate">
+                    <svg width="13" height="14">
+                      <use href="/__spritemap#sprite-pin_locale"></use>
+                    </svg>
+                    <p>Кавказ</p>
+                  </div>
+                  <ul class="slide__length length">
+                    <li class="length__day">
+                      <svg width="20" height="20">
+                        <use href="/__spritemap#sprite-sun"></use>
+                      </svg>
+                      <p>4 дня</p>
+                    </li>
+                    <li class="length__night">
+                      <svg width="20" height="20">
+                        <use href="/__spritemap#sprite-moon"></use>
+                      </svg>
+                      <p>3 ночи</p>
+                    </li>
+                  </ul>
+                </div>
+                <h4>Путешествие вокруг&nbsp;Эльбруса</h4>
+                <div class="slide__line"></div>
+                <ul class="slide__data">
+                  <li class="slide__difficulty">
+                    <span>Сложность:</span>
+                    <div class="slide__stars">
+                      <svg width="16" height="16">
+                        <use href="/__spritemap#sprite-stars"></use>
+                      </svg>
+                      <svg width="16" height="16">
+                        <use href="/__spritemap#sprite-stars"></use>
+                      </svg>
+                      <svg width="16" height="16">
+                        <use href="/__spritemap#sprite-stars"></use>
+                      </svg>
+                      <svg width="16" height="16">
+                        <use href="/__spritemap#sprite-stars"></use>
+                      </svg>
+                      <svg width="16" height="16">
+                        <use href="/__spritemap#sprite-star-transparent"></use>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="slide__date">
+                    <span>Даты набора:</span>
+                    <div>12.06–19.06</div>
+                  </li>
+                  <li class="slide__group">
+                    <span>Группа:</span>
+                    <div>до 15 чел.</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide slide slide--belukha">
+              <div class="slide__container">
+                <div class="slide__info">
+                  <div class="slide__locate">
+                    <svg width="13" height="14">
+                      <use href="/__spritemap#sprite-pin_locale"></use>
+                    </svg>
+                    <p>Алтай</p>
+                  </div>
+                  <ul class="slide__length length">
+                    <li class="length__day">
+                      <svg width="20" height="20">
+                        <use href="/__spritemap#sprite-sun"></use>
+                      </svg>
+                      <p>14 дней</p>
+                    </li>
+                    <li class="length__night">
+                      <svg width="20" height="20">
+                        <use href="/__spritemap#sprite-moon"></use>
+                      </svg>
+                      <p>13 ночей</p>
+                    </li>
+                  </ul>
+                </div>
+                <h4>Путь к подножию Белухи</h4>
+                <div class="slide__line"></div>
+                <ul class="slide__data">
+                  <li class="slide__difficulty">
+                    <span>Сложность:</span>
+                    <div class="slide__stars">
+                      <svg width="16" height="16">
+                        <use href="/__spritemap#sprite-stars"></use>
+                      </svg>
+                      <svg width="16" height="16">
+                        <use href="/__spritemap#sprite-stars"></use>
+                      </svg>
+                      <svg width="16" height="16">
+                        <use href="/__spritemap#sprite-stars"></use>
+                      </svg>
+                      <svg width="16" height="16">
+                        <use href="/__spritemap#sprite-star-transparent"></use>
+                      </svg>
+                      <svg width="16" height="16">
+                        <use href="/__spritemap#sprite-star-transparent"></use>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="slide__date">
+                    <span>Даты набора:</span>
+                    <div>14.06–23.06</div>
+                  </li>
+                  <li class="slide__group">
+                    <span>Группа:</span>
+                    <div>до 25 чел.</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide slide slide--adygea">
+              <div class="slide__container">
+                <div class="slide__info">
+                  <div class="slide__locate">
+                    <svg width="13" height="14">
+                      <use href="/__spritemap#sprite-pin_locale"></use>
+                    </svg>
+                    <p>Адыгея</p>
+                  </div>
+                  <ul class="slide__length length">
+                    <li class="length__day">
+                      <svg width="20" height="20">
+                        <use href="/__spritemap#sprite-sun"></use>
+                      </svg>
+                      <p>7 дней</p>
+                    </li>
+                    <li class="length__night">
+                      <svg width="20" height="20">
+                        <use href="/__spritemap#sprite-moon"></use>
+                      </svg>
+                      <p>6 ночей</p>
+                    </li>
+                  </ul>
+                </div>
+                <h4>Через Фишт к Чёрному морю и обратно</h4>
+                <div class="slide__line"></div>
+                <ul class="slide__data">
+                  <li class="slide__difficulty">
+                    <span>Сложность:</span>
+                    <div class="slide__stars">
+                      <svg width="16" height="16">
+                        <use href="/__spritemap#sprite-stars"></use>
+                      </svg>
+                      <svg width="16" height="16">
+                        <use href="/__spritemap#sprite-stars"></use>
+                      </svg>
+                      <svg width="16" height="16">
+                        <use href="/__spritemap#sprite-stars"></use>
+                      </svg>
+                      <svg width="16" height="16">
+                        <use href="/__spritemap#sprite-stars"></use>
+                      </svg>
+                      <svg width="16" height="16">
+                        <use href="/__spritemap#sprite-star-transparent"></use>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="slide__date">
+                    <span>Даты набора:</span>
+                    <div>15.07–19.07</div>
+                  </li>
+                  <li class="slide__group">
+                    <span>Группа:</span>
+                    <div>до 22 чел.</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide slide slide--urals">
+              <div class="slide__container">
+                <div class="slide__info">
+                  <div class="slide__locate">
+                    <svg width="13" height="14">
+                      <use href="/__spritemap#sprite-pin_locale"></use>
+                    </svg>
+                    <p>Урал</p>
+                  </div>
+                  <ul class="slide__length length">
+                    <li class="length__day">
+                      <svg width="20" height="20">
+                        <use href="/__spritemap#sprite-sun"></use>
+                      </svg>
+                      <p>9 дней</p>
+                    </li>
+                    <li class="length__night">
+                      <svg width="20" height="20">
+                        <use href="/__spritemap#sprite-moon"></use>
+                      </svg>
+                      <p>10 ночей</p>
+                    </li>
+                  </ul>
+                </div>
+                <h4>Восхождение Манарага</h4>
+                <div class="slide__line"></div>
+                <ul class="slide__data">
+                  <li class="slide__difficulty">
+                    <span>Сложность:</span>
+                    <div class="slide__stars">
+                      <svg width="16" height="16">
+                        <use href="/__spritemap#sprite-stars"></use>
+                      </svg>
+                      <svg width="16" height="16">
+                        <use href="/__spritemap#sprite-stars"></use>
+                      </svg>
+                      <svg width="16" height="16">
+                        <use href="/__spritemap#sprite-stars"></use>
+                      </svg>
+                      <svg width="16" height="16">
+                        <use href="/__spritemap#sprite-stars"></use>
+                      </svg>
+                      <svg width="16" height="16">
+                        <use href="/__spritemap#sprite-stars"></use>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="slide__date">
+                    <span>Даты набора:</span>
+                    <div>12.07–19.07</div>
+                  </li>
+                  <li class="slide__group">
+                    <span>Группа:</span>
+                    <div>до 7 чел.</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tours__button">
+          <button
+            class="tours__button-prev swiper-button-prev"
+            aria-label="Предыдущий слайд"
+          >
+            <svg width="13" height="10">
+              <use href="/__spritemap#sprite-arrow"></use>
+            </svg>
+          </button>
+          <button
+            class="tours__button-next swiper-button-next"
+            aria-label="Следующий слайд"
+          >
+            <svg width="13" height="10">
+              <use href="/__spritemap#sprite-arrow"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <a
+        class="tours__link link"
+        aria-label="Ссылка на страничку Все туры"
+        href=""
+      >
+        <p>Показать все туры</p>
+        <svg width="12" height="14">
+          <use href="/__spritemap#sprite-arrow"></use>
+        </svg>
+      </a>
+    </section>
 
-    <section class="tours" data-test="tours">
+    <section class="tours" data-test="tours" id="tours">
       <div class="tours__container">
+        <p aria-hidden="true">Ближайшие туры</p>
         <h3 class="tours__title">Ближайшие туры</h3>
       </div>
     </section>
 
-    <section class="training" data-test="training">
+    <section class="training" data-test="training" id="training">
       <div class="training__container">
+        <p aria-hidden="true">Обучение</p>
         <h3 class="training__title">Обучение</h3>
       </div>
     </section>
 
-    <section class="about" data-test="about">
+    <section class="about" data-test="about" id="about">
       <div class="about__container">
+        <p aria-hidden="true">О нас</p>
         <h3 class="about__title">О нас</h3>
       </div>
     </section>
 
-    <section class="reviews" data-test="reviews">
+    <section class="reviews" data-test="reviews" id="reviews">
       <div class="reviews__container">
+        <p aria-hidden="true">Отзывы</p>
         <h3 class="reviews__title">Отзывы</h3>
       </div>
     </section>
 
-    <section class="adv" data-test="adv">
+    <section class="adv" data-test="adv" id="adv">
       <div class="adv__container">
+        <p aria-hidden="true">Преимущества</p>
         <h3 class="adv__title">Преимущества</h3>
       </div>
     </section>
 
-    <section class="gallery" data-test="gallery">
+    <section class="gallery" data-test="gallery" id="gallery">
       <div class="gallery__container">
+        <p aria-hidden="true">Фотогалерея</p>
         <h3 class="gallery__title">Фотогалерея</h3>
       </div>
     </section>
@@ -64,6 +451,7 @@
 
     <footer class="footer" data-test="footer">
       <div class="footer__container">
+        <p aria-hidden="true">Контакты</p>
         <h3 class="footer__title">Контакты</h3>
       </div>
     </footer>

@@ -2,17 +2,17 @@ button {
 }
 
 .primary-button {
-  background-color: $primary-button-bg;
+  background-color: $extra-color;
   color: $secondary-color;
 
   &:hover {
-    background-color: $secondary-color;
+    background-color: $basic-light-color;
     color: #1c3374;
     border: 1px solid #1c3374;
   }
 
   &:focus {
-    background-color: $secondary-color;
+    background-color: $basic-light-color;
     color: #1c3374;
   }
 
@@ -26,7 +26,7 @@ button {
 }
 
 // .secondary-button {
-//   background-color: $primary-button-bg;
+//   background-color: ;
 //   color: $secondary-color;
 
 //   &:hover {
