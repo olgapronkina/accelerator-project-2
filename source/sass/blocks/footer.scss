@@ -62,8 +62,8 @@
     position: absolute;
     top: 0;
     left: 50%;
-    content: "";
-    background-image: url("../../img/sprite/pin-filled.svg");
+    content: '';
+    background-image: url('../../img/sprite/pin-filled.svg');
     background-size: 19px 25px;
     background-repeat: no-repeat;
 
@@ -79,10 +79,12 @@
   @media (min-width: $tablet-width) {
     margin: 0 -45px;
     width: $tablet-width;
+    height: 340px;
   }
 
   @media (min-width: $desktop-width) {
     width: 600px;
+    height: 324px;
     flex-shrink: 0;
   }
 }
@@ -103,7 +105,7 @@
     position: absolute;
     top: 0;
     left: 50%;
-    content: "";
+    content: '';
     width: 100vw;
     height: 1px;
     background-color: $main-text-color-03;
