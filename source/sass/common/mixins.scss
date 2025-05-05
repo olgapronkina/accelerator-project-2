@@ -1,0 +1,30 @@
+@mixin font-face($font-family, $font-weight, $font-style, $font-src-ttf) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-display: swap;
+    src: $font-src-ttf format("ttf");
+  }
+}
+
+@mixin link-reset {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin button-reset {
+  padding: 0;
+  border: none;
+  font-family: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
