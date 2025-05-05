@@ -1,416 +1,281 @@
-.hero .hero__swiper {
+.hero__container {
+  padding: 0;
   position: relative;
 }
 
-.hero .swiper-wrapper {
-  width: 320px;
+.hero__slider {
+  position: relative;
+
+  height: 568px;
+
+  @media (min-width: $tablet-width) {
+    height: 1034px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 800px;
+  }
 }
 
-.hero .swiper-slide {
-  width: 320px;
-  min-height: 568px;
+.hero__slider-wrapper {
+  @include list-reset;
 }
 
-.hero__swiper .slide__details {
-  display: none;
-  margin: 0;
-  padding: 0;
-}
-
-.swiper-pagination {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  bottom: 40px;
+.hero__slider-wrapper .hero__slide {
+  position: relative;
   width: 100%;
-  height: 16px;
-  text-align: center;
-  z-index: 6;
+  height: 100%;
+  flex-shrink: 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 }
 
-.swiper-pagination-bullet {
+.hero__img-wrapper {
+  position: relative;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  z-index: -1;
+  background-color: $grey-color;
+
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: $hero-gradient;
+    z-index: 1;
+  }
+}
+
+.hero__img {
   display: block;
-  border-radius: 50px;
-  width: 14px;
-  height: 14px;
-  border: 1px solid #ffffff; /* var(--background-base) */
+
+  @media (min-width: $tablet-width) {
+    min-height: 82px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 800px;
+  }
 }
 
-.swiper-pagination-bullet:hover {
-  background-color: #d9d9d9; /* var(--bullet-hover) */
-  border: 1px solid #ffffff; /* var(--background-base) */
-}
-
-.swiper-pagination-bullet:active {
-  background-color: rgba(255, 255, 255, 0.5); /* var(--bulet-active) */
-  border: 1px solid #ffffff; /* var(--background-base) */
-}
-
-.swiper-pagination-bullet-active {
-  opacity: 1;
-  background-color: #ffffff; /* var(--background-base) */
-}
-
-.swiper-slide-container {
-  width: 288px;
-  margin: 0 auto;
-  color: #ffffff; /* var(--dark-background) */
+.hero__slide-content {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 15px 56px;
+  height: 100%;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 30px 45px 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    align-items: flex-start;
+    padding: 200px 120px 80px;
+    justify-content: flex-start;
+  }
 }
 
-// .swiper-slide-container h2 {
-//   @include title-h2;
-// }
+.hero__slide-content--photo {
+  .hero__slide-link {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 45px;
+    }
 
-.swiper-slide-container p {
-  margin: 15px 0 0;
-  font-weight: 400;
+    @media (min-width: $desktop-width) {
+      margin-bottom: auto;
+    }
+  }
+
+  &::after {
+    content: "";
+    width: 442px;
+    height: 365px;
+    display: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+
+      background-image:
+        image-set(
+          url("../../img/hero-cards-tablet.webp") 1x type("image/webp"),
+          url("../../img/hero-cards-tablet@2x.webp") 2x type("image/webp"),
+          url("../../img/hero-cards-tablet.png") 1x type("image/png"),
+          url("../../img/hero-cards-tablet@2x.png") 2x type("image/png")
+        );
+    }
+
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      width: 410px;
+      height: 459px;
+
+      top: 187px;
+      right: 120px;
+
+      background-image:
+        image-set(
+          url("../../img/hero-cards-desktop.webp") 1x type("image/webp"),
+          url("../../img/hero-cards-desktop@2x.webp") 2x type("image/webp"),
+          url("../../img/hero-cards-desktop.png") 1x type("image/png"),
+          url("../../img/hero-cards-desktop@2x.png") 2x type("image/png")
+        );
+    }
+  }
+}
+
+.hero__slide-content h2 {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 26px;
+  line-height: 26px;
+  font-weight: 800;
+  color: $white-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 56px;
+    line-height: 56px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 77px;
+    line-height: 77px;
+    margin-bottom: 25px;
+  }
+}
+
+.hero__slide-content p {
+  margin: 0;
+  margin-bottom: 60px;
   font-size: 15px;
   line-height: 20px;
-}
+  color: $white-color;
 
-.swiper-slide-container a {
-  margin-top: 60px;
-  margin-bottom: 134px;
-  // @include buttons-regular;
-}
-
-.slide--caucasus {
-  background-size: cover;
-  background-position: center;
-  background-image: linear-gradient(
-      112.1deg,
-      rgba(15, 20, 41, 0.33) 17.23%,
-      rgba(15, 20, 41, 0) 94.93%
-    ),
-    url('/source/img/caucasus-mobile.jpg');
-}
-
-.slide--caucasus h2 {
-  margin-top: 145px;
-  margin-bottom: 0;
-}
-
-.slide--kamchatka {
-  background-size: cover;
-  background-position: center;
-  background-image: linear-gradient(
-      112.1deg,
-      rgba(15, 20, 41, 0.33) 17.23%,
-      rgba(15, 20, 41, 0) 94.93%
-    ),
-    url('/source/img/kamchatka-mobile.jpg');
-}
-
-.slide--kamchatka h2 {
-  margin-top: 135px;
-  margin-bottom: 0;
-}
-
-.slide--altai {
-  background-size: cover;
-  background-position: center;
-  background-image: linear-gradient(
-      112.1deg,
-      rgba(15, 20, 41, 0.33) 17.23%,
-      rgba(15, 20, 41, 0) 94.93%
-    ),
-    url('/source/img/altai-mobile.jpg');
-}
-
-.slide--altai h2 {
-  margin-top: 122px;
-  margin-bottom: 0;
-}
-
-@media (min-resolution: 2dppx), (min-resolution: 192dpi) {
-  .slide--caucasus {
-    background-image: linear-gradient(
-        112.1deg,
-        rgba(15, 20, 41, 0.33) 17.23%,
-        rgba(15, 20, 41, 0) 94.93%
-      ),
-      url('/source/img/caucasus-mobile@x2.jpg');
-  }
-
-  .slide--kamchatka {
-    background-image: linear-gradient(
-        112.1deg,
-        rgba(15, 20, 41, 0.33) 17.23%,
-        rgba(15, 20, 41, 0) 94.93%
-      ),
-      url('/source/img/kamchatka-mobile@x2.jpg');
-  }
-
-  .slide--altai {
-    background-image: linear-gradient(
-        112.1deg,
-        rgba(15, 20, 41, 0.33) 17.23%,
-        rgba(15, 20, 41, 0) 94.93%
-      ),
-      url('/source/img/altai-mobile@x2.jpg');
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+    line-height: 24px;
+    margin-bottom: 35px;
+    max-width: 474px;
   }
 }
 
-@media screen and (width >= 768px) {
-  .hero .swiper-wrapper {
-    width: 768px;
+.hero__slide-content p br {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.hero__slide-link {
+  @media (min-width: $desktop-width) {
+    margin-bottom: auto;
+  }
+}
+
+.hero__slide-features {
+  @include list-reset;
+
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.hero__slide-features-item {
+  outline: 1px solid $white-color;
+  outline-offset: -1px;
+  padding: 14px 20px;
+  color: $white-color;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-size: cover;
   }
 
-  .hero .swiper-slide {
-    width: 768px;
-    min-height: 1034px;
+  &--moon::before {
+    background-image: url("../../img/sprite/moon.svg");
   }
-  .swiper-pagination {
+
+  &--level::before {
+    background-image: url("../../img/sprite/level.svg");
+  }
+}
+
+.hero__pagination {
+  @include list-reset;
+
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  height: 16px;
+  z-index: 9;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  transform: translateX(-50%);
+
+  @media (min-width: $tablet-width) {
     height: 20px;
   }
 
-  .swiper-pagination-bullet {
-    width: 18px;
-    height: 18px;
-  }
-
-  .swiper-slide-container {
-    width: 678px;
-  }
-
-  .swiper-slide-container h2 {
-    // @include title-h1;
-    margin-top: 342px;
-  }
-
-  .swiper-slide-container p {
-    width: 500px;
-    margin: 0 auto;
-    padding: 15px 0 0;
-    font-size: 17px;
-    line-height: 24px;
-  }
-
-  .swiper-slide-container a {
-    margin-top: 35px;
-  }
-
-  .slide--kamchatka {
-    background-size: cover;
-    background-position: center;
-    background-image: linear-gradient(
-        112.1deg,
-        rgba(15, 20, 41, 0.33) 17.23%,
-        rgba(15, 20, 41, 0) 94.93%
-      ),
-      url('/source/img/kamchatka-tablet.jpg');
-  }
-  .slide--kamchatka h2 {
-    margin-top: 137px;
-  }
-
-  .slide--caucasus {
-    background-size: cover;
-    background-position: center;
-    background-image: linear-gradient(
-        112.1deg,
-        rgba(15, 20, 41, 0.33) 17.23%,
-        rgba(15, 20, 41, 0) 94.93%
-      ),
-      url('/source/img/caucasus-tablet.jpg');
-  }
-
-  .slide--altai {
-    background-size: cover;
-    background-position: center;
-    background-image: linear-gradient(
-        112.1deg,
-        rgba(15, 20, 41, 0.33) 17.23%,
-        rgba(15, 20, 41, 0) 94.93%
-      ),
-      url('/source/img/altai-tablet.jpg');
-  }
-
-  @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
-    .slide--caucasus {
-      background-image: linear-gradient(
-          112.1deg,
-          rgba(15, 20, 41, 0.33) 17.23%,
-          rgba(15, 20, 41, 0) 94.93%
-        ),
-        url('/source/img/caucasus-tablet@x2.jpg');
-    }
-
-    .slide--kamchatka {
-      background-image: linear-gradient(
-          112.1deg,
-          rgba(15, 20, 41, 0.33) 17.23%,
-          rgba(15, 20, 41, 0) 94.93%
-        ),
-        url('/source/img/kamchatka-tablet@x2.jpg');
-    }
-
-    .slide--altai {
-      background-image: linear-gradient(
-          112.1deg,
-          rgba(15, 20, 41, 0.33) 17.23%,
-          rgba(15, 20, 41, 0) 94.93%
-        ),
-        url('/source/img/altai-tablet@x2.jpg');
-    }
+  @media (min-width: $desktop-width) {
+    right: 70px;
+    bottom: 90px;
+    left: auto;
   }
 }
 
-@media screen and (width >= 1440px) {
-  .hero .swiper-wrapper {
-    width: 1440px;
+.hero__pagination-bullet {
+  @include button-reset;
+
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid $white-color;
+  outline: 1px solid transparent;
+  outline-offset: 1px;
+  transition: background-color 0.3s, outline-color 0.3s;
+
+  &--active {
+    background-color: $white-color;
   }
 
-  .hero .swiper-slide {
-    width: 1440px;
-    min-height: 520px;
-    padding: 200px 0 80px;
+  &:hover {
+    background-color: $bullet-hover-color;
   }
 
-  .swiper-pagination {
-    justify-content: flex-end;
-    bottom: 92px;
-    right: 120px;
+  &:focus {
+    background-color: $white-color-05;
   }
 
-  .swiper-slide-container {
-    width: 780px;
-    margin: 0 120px;
-    text-align: left;
+  &:active {
+    outline-color: $white-color-05;
   }
 
-  .swiper-slide-container h2 {
-    margin: 0;
-  }
-
-  .swiper-slide-container p {
-    width: 420px;
-    margin: 0;
-    padding: 23px 0 0;
-  }
-
-  .swiper-slide-container a {
-    margin-top: 37px;
-  }
-
-  .slide--kamchatka .swiper-slide-container,
-  .slide--altai .swiper-slide-container {
-    width: 925px;
-  }
-
-  .slide--kamchatka h2 {
-    margin-top: 0;
-  }
-
-  .slide--altai h2 {
-    margin-top: 0;
-  }
-
-  .slide--kamchatka p {
-    width: 465px;
-  }
-  .slide--altai p {
-    width: 465px;
-  }
-
-  .slide--caucasus {
-    background-size: cover;
-    background-position: center;
-    background-image: linear-gradient(
-        112.1deg,
-        rgba(15, 20, 41, 0.33) 17.23%,
-        rgba(15, 20, 41, 0) 94.93%
-      ),
-      url('/source/img/caucasus-desktop.jpg');
-  }
-
-  .slide--kamchatka {
-    background-size: cover;
-    background-position: center;
-    background-image: linear-gradient(
-        112.1deg,
-        rgba(15, 20, 41, 0.33) 17.23%,
-        rgba(15, 20, 41, 0) 94.93%
-      ),
-      url('/source/img/kamchatka-desktop.jpg');
-  }
-
-  .slide--altai {
-    background-size: cover;
-    background-position: center;
-    background-image: linear-gradient(
-        112.1deg,
-        rgba(15, 20, 41, 0.33) 17.23%,
-        rgba(15, 20, 41, 0) 94.93%
-      ),
-      url('/source/img/altai-desktop.jpg');
-  }
-
-  @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
-    .slide--caucasus {
-      background-image: linear-gradient(
-          112.1deg,
-          rgba(15, 20, 41, 0.33) 17.23%,
-          rgba(15, 20, 41, 0) 94.93%
-        ),
-        url('/source/img/caucasus-desktop@x2.jpg');
-    }
-
-    .slide--kamchatka {
-      background-image: linear-gradient(
-          112.1deg,
-          rgba(15, 20, 41, 0.33) 17.23%,
-          rgba(15, 20, 41, 0) 94.93%
-        ),
-        url('/source/img/kamchatka-desktop@x2.jpg');
-    }
-
-    .slide--altai {
-      background-image: linear-gradient(
-          112.1deg,
-          rgba(15, 20, 41, 0.33) 17.23%,
-          rgba(15, 20, 41, 0) 94.93%
-        ),
-        url('/source/img/altai-desktop@x2.jpg');
-    }
-  }
-
-  .hero__swiper .slide__details {
-    display: flex;
-    gap: 10px;
-    color: #ffffff; /* var(--dark-background) */
-    // @include text-xsmall;
-  }
-
-  .slide__details li {
-    position: relative;
-    padding: 13px 18px 13px 40px;
-    border: 1px solid rgba(255, 255, 255, 0.5); /* var(--icon-border) */
-  }
-
-  .details__length::before {
-    content: '';
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    top: 16px;
-    bottom: 16px;
-    left: 20px;
-    background-image: url('/source/img/sprite/moon.svg');
-    background-size: cover;
-  }
-
-  .details__level::before {
-    content: '';
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    top: 16px;
-    bottom: 16px;
-    left: 20px;
-    background-image: url('/source/img/sprite/level.svg');
-    background-size: cover;
+  @media (min-width: $tablet-width) {
+    width: 20px;
+    height: 20px;
   }
 }

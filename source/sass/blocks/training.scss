@@ -1,0 +1,368 @@
+.training {
+  @media (min-width: $desktop-width) {
+    padding: 40px 0;
+  }
+}
+
+.training__container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  @media (min-width: $desktop-width) {
+    gap: 58px;
+  }
+}
+
+.training__top {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  @media (min-width: $tablet-width) {
+    gap: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 33px;
+  }
+}
+
+.training__top p {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 20px;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+
+    br {
+      display: block;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 820px;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.training__trainers {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  @media (min-width: $tablet-width) {
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 14px;
+  }
+}
+
+.training__trainers-title {
+  margin: 0;
+
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 800;
+
+  @media (min-width: $tablet-width) {
+    font-size: 25px;
+    line-height: 25px;
+    padding: 5px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 35px;
+    line-height: 35px;
+    padding: 5px 0 2px;
+  }
+}
+
+.training__slider-buttons {
+  position: absolute;
+  right: 0;
+}
+
+.training__slider {
+  width: 290px;
+
+  @media (min-width: $tablet-width) {
+    width: 678px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+  }
+}
+
+.training__slider-wrapper {
+  @include list-reset;
+}
+
+.training__slider-wrapper .training__slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 15px;
+  padding: 15px;
+  outline: 1px solid $accent-color-02;
+  outline-offset: -1px;
+  width: 290px;
+  min-height: 356px;
+  background-color: $white-color;
+
+  @media (min-width: $tablet-width) {
+    width: 212px;
+    min-height: 388px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 285px;
+    min-height: 356px;
+  }
+}
+
+.training__slide-image-wrapper {
+  width: 260px;
+  height: 200px;
+  background-color: $grey-color;
+
+  @media (min-width: $tablet-width) {
+    width: 182px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 255px;
+  }
+}
+
+.training__slide-image {
+  display: block;
+  object-fit: cover;
+  height: 200px;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    height: 200px;
+  }
+}
+
+.training__slide-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.training__slide h4 {
+  margin: 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.training__slide-link {
+  width: 24px;
+  height: 24px;
+}
+
+.training__slide p {
+  margin: 0;
+
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.training__process-title {
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 18px;
+    padding-top: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 21px;
+    line-height: 21px;
+    padding-top: 0;
+    margin-bottom: 27px;
+  }
+}
+
+.training__process-list {
+  @include list-reset;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  &::before {
+    position: absolute;
+    left: 7px;
+    top: 50%;
+    content: '';
+    width: 183px;
+    height: 2px;
+    background-color: $accent-color;
+    transform: translateX(-50%) rotate(90deg);
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 75px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 104px 136px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    padding-top: 0;
+
+    &::before {
+      display: block;
+      width: calc(100% - 23px);
+      bottom: 12px;
+      top: auto;
+      left: 50%;
+      transform: translateX(-49%);
+    }
+  }
+}
+
+.training__process-item {
+  position: relative;
+  font-size: 12px;
+  line-height: 18px;
+  padding-left: 29px;
+  padding-right: 15px;
+
+  display: flex;
+  gap: 9px;
+
+  br {
+    display: none;
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    content: '';
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: $accent-color;
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--map::before {
+    background-image: url('../../img/sprite/map-icon-view.svg');
+
+    // background-image: url('/__spritemap#sprite-map-icon-view');
+  }
+
+  &--prepare::before {
+    background-image: url('../../img/sprite/boot-icon-view.svg');
+
+    // background-image: url('/__spritemap#sprite-boot-icon-view');
+  }
+
+  &--lessons::before {
+    background-image: url('../../img/sprite/forest-icon-view.svg');
+
+    // background-image: url('/__spritemap#sprite-forest-icon-view');
+  }
+
+  &--difficulty::before {
+    background-image: url('../../img/sprite/mountain-icon-view.svg');
+
+    // background-image: url('/__spritemap#sprite-mountain-icon-view');
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+    font-size: 14px;
+    line-height: 22px;
+    gap: 10px;
+
+    &::after {
+      display: none;
+    }
+
+    &--map {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
+    &--prepare {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+
+    &--lessons {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+
+    &--difficulty {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 253px;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 10px 22px;
+
+    br {
+      display: block;
+    }
+
+    &::after {
+      display: block;
+      bottom: 0;
+      top: auto;
+      left: 20px;
+    }
+
+    &--lessons::after {
+      left: 0;
+    }
+  }
+}

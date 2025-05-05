@@ -1,0 +1,71 @@
+.phone {
+  @include link-reset;
+
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 600;
+  color: $white-color;
+  padding-top: 2px;
+  align-self: flex-end;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $white-color-05;
+  }
+
+  &:focus {
+    color: $main-text-color;
+    outline: none;
+  }
+
+  &:active {
+    color: $active-link-color;
+  }
+
+  &--dark {
+    color: $main-text-color;
+
+    &:hover {
+      color: $main-text-color-03;
+    }
+
+    &:focus {
+      color: $accent-color;
+      outline: none;
+    }
+
+    &:active {
+      color: $active-link-color;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+    align-self: center;
+    padding-top: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+.phone--disabled {
+  color: $grey-color;
+  cursor: default;
+  pointer-events: none;
+
+  &:hover {
+    color: $grey-color;
+  }
+
+  &:focus {
+    color: $grey-color;
+  }
+
+  &:active {
+    color: $grey-color;
+  }
+}

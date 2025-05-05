@@ -1,0 +1,48 @@
+.policy-link {
+  @include link-reset;
+
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 300;
+  padding-top: 3px;
+  color: $main-text-color;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $main-text-color-03;
+  }
+
+  &:focus {
+    color: $accent-color;
+    outline: none;
+  }
+
+  &:active {
+    color: $active-link-color;
+  }
+
+  &--disabled {
+    color: $grey-color;
+    cursor: default;
+    pointer-events: none;
+
+    &:hover {
+      color: $grey-color;
+    }
+
+    &:focus {
+      color: $grey-color;
+    }
+
+    &:active {
+      color: $grey-color;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    justify-self: center;
+    padding-top: 0;
+  }
+}

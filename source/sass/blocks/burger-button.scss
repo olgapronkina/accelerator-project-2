@@ -1,0 +1,91 @@
+.burger-button {
+  @include button-reset;
+
+  position: relative;
+  width: 26px;
+  height: 26px;
+  align-self: flex-start;
+
+  &:hover {
+    .burger-button__line,
+    .burger-button__line::before,
+    .burger-button__line::after {
+      background-color: $white-color-05;
+    }
+  }
+
+  &:focus {
+    outline: none;
+
+    .burger-button__line,
+    .burger-button__line::before,
+    .burger-button__line::after {
+      background-color: $main-text-color;
+    }
+  }
+
+  &:active {
+    .burger-button__line,
+    .burger-button__line::before,
+    .burger-button__line::after {
+      background-color: $active-link-color;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    align-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.burger-button--active {
+  .burger-button__line {
+    top: 50%;
+    transform: rotate(-45deg) translateY(-50%);
+  }
+
+  .burger-button__line::before {
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+  .burger-button__line::after {
+    width: 0;
+  }
+}
+
+.burger-button__line {
+  position: absolute;
+  left: 0;
+  color: $white-color;
+  top: 3px;
+  width: 26px;
+  height: 2px;
+  background-color: $white-color;
+  transition: background-color 0.3s, transform 0.3s, top 0.3s;
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: 0;
+    content: "";
+    color: $white-color;
+    width: 26px;
+    height: 2px;
+    background-color: $white-color;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  &::before {
+    bottom: -18px;
+  }
+
+  &::after {
+    width: 16px;
+    height: 2px;
+    bottom: -9px;
+  }
+}
