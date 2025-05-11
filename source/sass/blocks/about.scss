@@ -13,8 +13,8 @@
   );
 
   @media (min-width: $tablet-width) {
-    background-size: 540px 355px;
-    background-position: 109px 156px;
+    background-size: 542px 350px;
+    background-position: 0 161px;
     padding-top: 20px;
 
     background-image: image-set(
@@ -29,7 +29,7 @@
     padding-bottom: 178px;
     padding-top: 82px;
     background-size: 660px 498px;
-    background-position: 26px 80px;
+    background-position: 30px 82px;
 
     background-image: image-set(
       url('../../img/about-bg-desktop.webp') 1x type('image/webp'),
@@ -104,7 +104,7 @@
   @media (min-width: $desktop-width) {
     font-size: 35px;
     line-height: 35px;
-    margin-bottom: 57px;
+    margin-bottom: 59px;
     min-height: 80px;
 
     &::before {
@@ -126,7 +126,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    gap: 25px;
+    gap: 27px;
   }
 }
 
@@ -140,7 +140,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    gap: 20px;
+    gap: 18px;
   }
 }
 
