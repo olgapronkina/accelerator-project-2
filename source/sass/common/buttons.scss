@@ -6,56 +6,56 @@
   font-size: 16px;
   line-height: 16px;
   font-weight: 500;
-  color: $white-color;
+  color: $white;
   min-width: 180px;
   text-align: center;
-  background-color: $accent-color;
+  background-color: $accent;
   outline: 1px solid transparent;
   transition: color 0.3s, background-color 0.3s, outline-color 0.3s;
 
   &:hover {
-    background-color: $white-color;
-    color: $active-link-color;
-    outline-color: $active-link-color;
+    background-color: $white;
+    color: $active-link;
+    outline-color: $active-link;
   }
 
   &:focus {
-    background-color: $white-color;
-    color: $active-link-color;
+    background-color: $white;
+    color: $active-link;
     outline: none;
   }
 
   &:active {
-    background-color: $active-link-color;
-    color: $white-color;
+    background-color: $active-link;
+    color: $white;
   }
 
   &:disabled {
-    background-color: $grey-color;
-    color: $white-color;
+    background-color: $grey;
+    color: $white;
     outline: none;
   }
 }
 
 .button--disabled {
-  background-color: $grey-color;
-  color: $white-color;
+  background-color: $grey;
+  color: $white;
   cursor: default;
   pointer-events: none;
 
   &:hover {
-    background-color: $grey-color;
-    color: $white-color;
+    background-color: $grey;
+    color: $white;
     outline: none;
   }
 
   &:focus {
-    background-color: $grey-color;
-    color: $white-color;
+    background-color: $grey;
+    color: $white;
   }
 
   &:active {
-    background-color: $grey-color;
-    color: $white-color;
+    background-color: $grey;
+    color: $white;
   }
 }

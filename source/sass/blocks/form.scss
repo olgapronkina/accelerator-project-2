@@ -7,18 +7,17 @@
 
   &::before {
     position: absolute;
-    content: "";
+    content: '';
     inset: 0;
     background-color: rgba(0, 0, 0, 0.2);
   }
 
-  background-image:
-    image-set(
-      url("../../img/form-bg.webp") 1x type("image/webp"),
-      url("../../img/form-bg@2x.webp") 2x type("image/webp"),
-      url("../../img/form-bg.png") 1x type("image/png"),
-      url("../../img/form-bg@2x.png") 2x type("image/png")
-    );
+  background-image: image-set(
+    url('../../img/form-bg.webp') 1x type('image/webp'),
+    url('../../img/form-bg@2x.webp') 2x type('image/webp'),
+    url('../../img/form-bg.png') 1x type('image/png'),
+    url('../../img/form-bg@2x.png') 2x type('image/png')
+  );
 }
 
 .form__container {
@@ -61,7 +60,7 @@
 
 .form__top h2 {
   margin: 0;
-  color: $white-color;
+  color: $white;
   font-size: 22px;
   line-height: 22px;
   font-weight: 800;
@@ -81,7 +80,7 @@
 
 .form__top p {
   margin: 0;
-  color: $white-color;
+  color: $white;
   font-size: 12px;
   line-height: 18px;
 
@@ -128,7 +127,7 @@
   font-size: 16px;
   line-height: 16px;
   opacity: 0.5;
-  color: $main-text-color;
+  color: $main-text;
 
   top: 17px;
   left: 15px;
@@ -155,8 +154,8 @@
   line-height: 16px;
   font-weight: 400;
 
-  background-color: $white-color;
-  outline: 1px solid $accent-color-02;
+  background-color: $white;
+  outline: 1px solid $accent-02;
   outline-offset: -1px;
   transition: outline-color 0.3s;
 
@@ -168,27 +167,27 @@
   }
 
   &:focus::placeholder {
-    color: rgba($main-text-color, 0.5);
+    color: rgba($main-text, 0.5);
   }
 
   &:hover {
-    outline-color: $accent-color;
+    outline-color: $accent;
   }
 
   &:focus {
-    outline-color: $main-text-color;
+    outline-color: $main-text;
   }
 
   &:disabled {
-    outline-color: $grey-color;
+    outline-color: $grey;
 
     .form__label {
-      color: $grey-color;
+      color: $grey;
     }
   }
 
   &--error {
-    outline-color: $error-color;
+    outline: $error;
   }
 
   @media (min-width: $tablet-width) {

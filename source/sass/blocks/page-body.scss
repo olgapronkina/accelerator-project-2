@@ -7,12 +7,12 @@
 
   &--overlay::before {
     position: absolute;
-    content: "";
+    content: '';
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: $main-text-color-06;
+    background-color: $main-text-06;
     z-index: 2;
   }
 }
@@ -29,35 +29,33 @@
   // background-position-x: 600px;
   // background-position-y: 940px;
 
-  background-image:
-    image-set(
-      url("../../img/clouds-1-mobile.webp") 1x type("image/webp"),
-      url("../../img/clouds-1-mobile@2x.webp") 2x type("image/webp"),
-      url("../../img/clouds-1-mobile.png") 1x type("image/png"),
-      url("../../img/clouds-1-mobile@2x.png") 2x type("image/png")
-    );
+  background-image: image-set(
+    url('../../img/clouds-1-mobile.webp') 1x type('image/webp'),
+    url('../../img/clouds-1-mobile@2x.webp') 2x type('image/webp'),
+    url('../../img/clouds-1-mobile.png') 1x type('image/png'),
+    url('../../img/clouds-1-mobile@2x.png') 2x type('image/png')
+  );
 
   @media (min-width: $tablet-width) {
     background-position: right 942px, right 2283px, center 4066px;
 
-    background-image:
-      image-set(
-        url("../../img/clouds-1-tablet.webp") 1x type("image/webp"),
-        url("../../img/clouds-1-tablet@2x.webp") 2x type("image/webp"),
-        url("../../img/clouds-1-tablet.png") 1x type("image/png"),
-        url("../../img/clouds-1-tablet@2x.png") 2x type("image/png")
+    background-image: image-set(
+        url('../../img/clouds-1-tablet.webp') 1x type('image/webp'),
+        url('../../img/clouds-1-tablet@2x.webp') 2x type('image/webp'),
+        url('../../img/clouds-1-tablet.png') 1x type('image/png'),
+        url('../../img/clouds-1-tablet@2x.png') 2x type('image/png')
       ),
       image-set(
-        url("../../img/clouds-2-tablet.webp") 1x type("image/webp"),
-        url("../../img/clouds-2-tablet@2x.webp") 2x type("image/webp"),
-        url("../../img/clouds-2-tablet.png") 1x type("image/png"),
-        url("../../img/clouds-2-tablet@2x.png") 2x type("image/png")
+        url('../../img/clouds-2-tablet.webp') 1x type('image/webp'),
+        url('../../img/clouds-2-tablet@2x.webp') 2x type('image/webp'),
+        url('../../img/clouds-2-tablet.png') 1x type('image/png'),
+        url('../../img/clouds-2-tablet@2x.png') 2x type('image/png')
       ),
       image-set(
-        url("../../img/clouds-3-tablet.webp") 1x type("image/webp"),
-        url("../../img/clouds-3-tablet@2x.webp") 2x type("image/webp"),
-        url("../../img/clouds-3-tablet.png") 1x type("image/png"),
-        url("../../img/clouds-3-tablet@2x.png") 2x type("image/png")
+        url('../../img/clouds-3-tablet.webp') 1x type('image/webp'),
+        url('../../img/clouds-3-tablet@2x.webp') 2x type('image/webp'),
+        url('../../img/clouds-3-tablet.png') 1x type('image/png'),
+        url('../../img/clouds-3-tablet@2x.png') 2x type('image/png')
       );
   }
 
@@ -65,24 +63,23 @@
     background-size: auto;
     background-position: right 674px, right 2283px, calc(50% - -13px) 3518px;
 
-    background-image:
-      image-set(
-        url("../../img/clouds-1-desktop.webp") 1x type("image/webp"),
-        url("../../img/clouds-1-desktop@2x.webp") 2x type("image/webp"),
-        url("../../img/clouds-1-desktop.png") 1x type("image/png"),
-        url("../../img/clouds-1-desktop@2x.png") 2x type("image/png")
+    background-image: image-set(
+        url('../../img/clouds-1-desktop.webp') 1x type('image/webp'),
+        url('../../img/clouds-1-desktop@2x.webp') 2x type('image/webp'),
+        url('../../img/clouds-1-desktop.png') 1x type('image/png'),
+        url('../../img/clouds-1-desktop@2x.png') 2x type('image/png')
       ),
       image-set(
-        url("../../img/clouds-2-desktop.webp") 1x type("image/webp"),
-        url("../../img/clouds-2-desktop@2x.webp") 2x type("image/webp"),
-        url("../../img/clouds-2-desktop.png") 1x type("image/png"),
-        url("../../img/clouds-2-desktop@2x.png") 2x type("image/png")
+        url('../../img/clouds-2-desktop.webp') 1x type('image/webp'),
+        url('../../img/clouds-2-desktop@2x.webp') 2x type('image/webp'),
+        url('../../img/clouds-2-desktop.png') 1x type('image/png'),
+        url('../../img/clouds-2-desktop@2x.png') 2x type('image/png')
       ),
       image-set(
-        url("../../img/clouds-3-desktop.webp") 1x type("image/webp"),
-        url("../../img/clouds-3-desktop@2x.webp") 2x type("image/webp"),
-        url("../../img/clouds-3-desktop.png") 1x type("image/png"),
-        url("../../img/clouds-3-desktop@2x.png") 2x type("image/png")
+        url('../../img/clouds-3-desktop.webp') 1x type('image/webp'),
+        url('../../img/clouds-3-desktop@2x.webp') 2x type('image/webp'),
+        url('../../img/clouds-3-desktop.png') 1x type('image/png'),
+        url('../../img/clouds-3-desktop@2x.png') 2x type('image/png')
       );
   }
 }

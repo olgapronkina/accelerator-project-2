@@ -37,11 +37,11 @@
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   z-index: -1;
-  background-color: $grey-color;
+  background-color: $grey;
 
   &::before {
     position: absolute;
-    content: "";
+    content: '';
     inset: 0;
     background: $hero-gradient;
     z-index: 1;
@@ -95,7 +95,7 @@
   }
 
   &::after {
-    content: "";
+    content: '';
     width: 442px;
     height: 365px;
     display: none;
@@ -105,13 +105,12 @@
     @media (min-width: $tablet-width) {
       display: block;
 
-      background-image:
-        image-set(
-          url("../../img/hero-cards-tablet.webp") 1x type("image/webp"),
-          url("../../img/hero-cards-tablet@2x.webp") 2x type("image/webp"),
-          url("../../img/hero-cards-tablet.png") 1x type("image/png"),
-          url("../../img/hero-cards-tablet@2x.png") 2x type("image/png")
-        );
+      background-image: image-set(
+        url('../../img/hero-cards-tablet.webp') 1x type('image/webp'),
+        url('../../img/hero-cards-tablet@2x.webp') 2x type('image/webp'),
+        url('../../img/hero-cards-tablet.png') 1x type('image/png'),
+        url('../../img/hero-cards-tablet@2x.png') 2x type('image/png')
+      );
     }
 
     @media (min-width: $desktop-width) {
@@ -122,13 +121,12 @@
       top: 187px;
       right: 120px;
 
-      background-image:
-        image-set(
-          url("../../img/hero-cards-desktop.webp") 1x type("image/webp"),
-          url("../../img/hero-cards-desktop@2x.webp") 2x type("image/webp"),
-          url("../../img/hero-cards-desktop.png") 1x type("image/png"),
-          url("../../img/hero-cards-desktop@2x.png") 2x type("image/png")
-        );
+      background-image: image-set(
+        url('../../img/hero-cards-desktop.webp') 1x type('image/webp'),
+        url('../../img/hero-cards-desktop@2x.webp') 2x type('image/webp'),
+        url('../../img/hero-cards-desktop.png') 1x type('image/png'),
+        url('../../img/hero-cards-desktop@2x.png') 2x type('image/png')
+      );
     }
   }
 }
@@ -139,7 +137,7 @@
   font-size: 26px;
   line-height: 26px;
   font-weight: 800;
-  color: $white-color;
+  color: $white;
 
   @media (min-width: $tablet-width) {
     font-size: 56px;
@@ -158,7 +156,7 @@
   margin-bottom: 60px;
   font-size: 15px;
   line-height: 20px;
-  color: $white-color;
+  color: $white;
 
   @media (min-width: $tablet-width) {
     font-size: 17px;
@@ -195,10 +193,10 @@
 }
 
 .hero__slide-features-item {
-  outline: 1px solid $white-color;
+  outline: 1px solid $white;
   outline-offset: -1px;
   padding: 14px 20px;
-  color: $white-color;
+  color: $white;
   font-size: 12px;
   line-height: 16px;
   display: flex;
@@ -206,18 +204,18 @@
   gap: 8px;
 
   &::before {
-    content: "";
+    content: '';
     width: 12px;
     height: 12px;
     background-size: cover;
   }
 
   &--moon::before {
-    background-image: url("../../img/sprite/moon.svg");
+    background-image: url('../../img/sprite/moon.svg');
   }
 
   &--level::before {
-    background-image: url("../../img/sprite/level.svg");
+    background-image: url('../../img/sprite/level.svg');
   }
 }
 
@@ -253,25 +251,25 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  border: 1px solid $white-color;
+  border: 1px solid $white;
   outline: 1px solid transparent;
   outline-offset: 1px;
   transition: background-color 0.3s, outline-color 0.3s;
 
   &--active {
-    background-color: $white-color;
+    background-color: $white;
   }
 
   &:hover {
-    background-color: $bullet-hover-color;
+    background-color: $bullet-hover;
   }
 
   &:focus {
-    background-color: $white-color-05;
+    background-color: $white-05;
   }
 
   &:active {
-    outline-color: $white-color-05;
+    outline-color: $white-05;
   }
 
   @media (min-width: $tablet-width) {

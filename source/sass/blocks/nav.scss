@@ -4,7 +4,7 @@
   top: 100%;
   left: 0;
   right: 0;
-  background-color: $accent-color;
+  background-color: $accent;
   padding: 12px 0 47px;
 
   @media (min-width: $tablet-width) {
@@ -55,7 +55,7 @@
   position: relative;
   font-size: 14px;
   line-height: 14px;
-  color: $white-color;
+  color: $white;
   padding: 3px 5px;
   outline: 1px solid transparent;
   outline-offset: -1px;
@@ -67,7 +67,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    content: "";
+    content: '';
     width: 100%;
     height: 1px;
     background-color: transparent;
@@ -76,16 +76,16 @@
 
   &:hover {
     &::before {
-      background-color: $white-color;
+      background-color: $white;
     }
   }
 
   &:focus {
-    outline-color: $white-color;
+    outline-color: $white;
   }
 
   &:active {
-    color: $active-link-color;
+    color: $active-link;
     outline-color: transparent;
 
     &::before {
@@ -120,20 +120,20 @@
 }
 
 .nav-link--dark {
-  color: $main-text-color;
+  color: $main-text;
 
   &:hover {
     &::before {
-      background-color: $main-text-color;
+      background-color: $main-text;
     }
   }
 
   &:focus {
-    outline-color: $main-text-color;
+    outline-color: $main-text;
   }
 
   &:active {
-    color: $accent-color;
+    color: $accent;
     outline-color: transparent;
 
     &::before {
@@ -143,7 +143,7 @@
 }
 
 .nav-link--disabled {
-  color: $grey-color;
+  color: $grey;
   cursor: default;
   pointer-events: none;
 
@@ -158,7 +158,7 @@
   }
 
   &:active {
-    color: $grey-color;
+    color: $grey;
     outline-color: transparent;
 
     &::before {

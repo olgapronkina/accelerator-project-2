@@ -76,8 +76,8 @@
 .reviews__slider-wrapper .reviews__slide {
   position: relative;
   padding: 20px;
-  box-shadow: 0 0 20px 0 $shadow-color;
-  background-color: $white-color;
+  box-shadow: 0 0 20px 0 $shadow;
+  background-color: $white;
 
   display: flex;
   flex-direction: column;
@@ -100,7 +100,7 @@
   width: 250px;
   height: 169px;
   flex-shrink: 0;
-  background-color: $grey-color;
+  background-color: $grey;
 
   @media (min-width: $tablet-width) {
     width: 186px;

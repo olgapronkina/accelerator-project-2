@@ -23,15 +23,15 @@
 }
 
 .social-link {
-  border: 1px solid $main-text-color-03;
+  border: 1px solid $main-text-03;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $white-color;
+  background-color: $white;
   transition: border-color 0.3s, background-color 0.3s;
 
   &:hover {
-    border-color: $main-text-color;
+    border-color: $main-text;
   }
 
   &:focus {
@@ -40,11 +40,11 @@
   }
 
   &:active {
-    background-color: $accent-color;
+    background-color: $accent;
     border-color: transparent;
 
     .social-link-icon {
-      fill: $white-color;
+      fill: $white;
     }
   }
 }
@@ -52,30 +52,30 @@
 .social-link--disabled {
   cursor: default;
   pointer-events: none;
-  border-color: $grey-color;
+  border-color: $grey;
 
   .social-link-icon {
-    fill: $grey-color;
+    fill: $grey;
   }
 
   &:hover {
-    border-color: $grey-color;
+    border-color: $grey;
   }
 
   &:focus {
-    border-color: $grey-color;
+    border-color: $grey;
   }
 
   &:active {
-    border-color: $grey-color;
-    background-color: $white-color;
+    border-color: $grey;
+    background-color: $white;
 
     .social-link-icon {
-      fill: $grey-color;
+      fill: $grey;
     }
   }
 }
 
 .social-link-icon {
-  fill: $main-text-color;
+  fill: $main-text;
 }

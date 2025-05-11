@@ -5,37 +5,37 @@
   line-height: 12px;
   font-weight: 300;
   padding-top: 3px;
-  color: $main-text-color;
+  color: $main-text;
   transition: color 0.3s;
 
   &:hover {
-    color: $main-text-color-03;
+    color: $main-text-03;
   }
 
   &:focus {
-    color: $accent-color;
+    color: $accent;
     outline: none;
   }
 
   &:active {
-    color: $active-link-color;
+    color: $active-link;
   }
 
   &--disabled {
-    color: $grey-color;
+    color: $grey;
     cursor: default;
     pointer-events: none;
 
     &:hover {
-      color: $grey-color;
+      color: $grey;
     }
 
     &:focus {
-      color: $grey-color;
+      color: $grey;
     }
 
     &:active {
-      color: $grey-color;
+      color: $grey;
     }
   }
 

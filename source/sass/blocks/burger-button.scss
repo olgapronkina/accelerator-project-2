@@ -10,7 +10,7 @@
     .burger-button__line,
     .burger-button__line::before,
     .burger-button__line::after {
-      background-color: $white-color-05;
+      background-color: $white-05;
     }
   }
 
@@ -20,7 +20,7 @@
     .burger-button__line,
     .burger-button__line::before,
     .burger-button__line::after {
-      background-color: $main-text-color;
+      background-color: $main-text;
     }
   }
 
@@ -28,7 +28,7 @@
     .burger-button__line,
     .burger-button__line::before,
     .burger-button__line::after {
-      background-color: $active-link-color;
+      background-color: $active-link;
     }
   }
 
@@ -60,22 +60,22 @@
 .burger-button__line {
   position: absolute;
   left: 0;
-  color: $white-color;
+  color: $white;
   top: 3px;
   width: 26px;
   height: 2px;
-  background-color: $white-color;
+  background-color: $white;
   transition: background-color 0.3s, transform 0.3s, top 0.3s;
 
   &::before,
   &::after {
     position: absolute;
     left: 0;
-    content: "";
-    color: $white-color;
+    content: '';
+    color: $white;
     width: 26px;
     height: 2px;
-    background-color: $white-color;
+    background-color: $white;
     transition: background-color 0.3s, transform 0.3s;
   }
 

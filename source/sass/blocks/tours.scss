@@ -44,8 +44,8 @@
   grid-template-rows: 1fr;
   min-height: 416px;
 
-  background-color: $grey-color;
-  color: $white-color;
+  background-color: $grey;
+  color: $white;
   width: 290px;
 
   @media (min-width: $tablet-width) {
@@ -64,7 +64,7 @@
 
   &::before {
     position: absolute;
-    content: "";
+    content: '';
     inset: 0;
     z-index: 1;
     background: $tours-gradient;
@@ -116,7 +116,7 @@
   line-height: 12px;
   font-weight: 500;
   padding: 8px 12px 8px 16px;
-  background-color: $accent-color;
+  background-color: $accent;
   min-width: 85px;
 
   display: flex;
@@ -124,10 +124,10 @@
   gap: 9px;
 
   &::before {
-    content: "";
+    content: '';
     width: 9px;
     height: 12px;
-    background-image: url("../../img/sprite/pin-white-view.svg");
+    background-image: url('../../img/sprite/pin-white-view.svg');
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -151,7 +151,7 @@
   align-items: center;
 
   &::before {
-    content: "";
+    content: '';
     width: 20px;
     height: 20px;
     background-repeat: no-repeat;
@@ -160,11 +160,11 @@
   }
 
   &--days::before {
-    background-image: url("../../img/sprite/sun.svg");
+    background-image: url('../../img/sprite/sun.svg');
   }
 
   &--nights::before {
-    background-image: url("../../img/sprite/moon.svg");
+    background-image: url('../../img/sprite/moon.svg');
   }
 }
 
@@ -180,10 +180,10 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    content: "";
+    content: '';
     width: 80px;
     height: 1px;
-    background-color: $white-color;
+    background-color: $white;
     opacity: 0.2;
   }
 }
@@ -192,7 +192,7 @@
   @include list-reset;
 
   display: flex;
-  gap: 8px;
+  gap: 7px;
   justify-content: space-between;
 }
 
@@ -225,11 +225,11 @@
 .tours__slide-stars-item {
   width: 16px;
   height: 16px;
-  background-image: url("../../img/sprite/star-trasparent-icon.svg");
+  background-image: url('../../img/sprite/star-trasparent-icon.svg');
   background-repeat: no-repeat;
 
   &--active {
-    background-image: url("../../img/sprite/stars-icon.svg");
+    background-image: url('../../img/sprite/stars-icon.svg');
   }
 }
 
@@ -247,7 +247,7 @@
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: $main-text-color;
+  color: $main-text;
 
   display: flex;
   align-items: center;
@@ -258,36 +258,36 @@
   transition: color 0.3s;
 
   &:hover {
-    color: $accent-color-01;
+    color: $accent-01;
 
     &::after {
-      background-color: $accent-color-01;
+      background-color: $accent-01;
     }
   }
 
   &:focus {
-    color: $accent-color;
+    color: $accent;
     outline: none;
 
     &::after {
-      background-color: $accent-color;
+      background-color: $accent;
     }
   }
 
   &:active {
-    color: $active-link-color;
+    color: $active-link;
 
     &::after {
-      background-color: $active-link-color;
+      background-color: $active-link;
     }
   }
 
   &::after {
-    content: "";
+    content: '';
     width: 9px;
     height: 14px;
-    background-color: $main-text-color;
-    mask-image: url("../../img/sprite/link-arrow-icon.svg");
+    background-color: $main-text;
+    mask-image: url('../../img/sprite/link-arrow-icon.svg');
     transition: background-color 0.3s;
   }
 
@@ -298,36 +298,36 @@
 }
 
 .tours__link--disabled {
-  color: $grey-color;
+  color: $grey;
   cursor: default;
   pointer-events: none;
 
   &::after {
-    background-color: $grey-color;
+    background-color: $grey;
   }
 
   &:hover {
-    color: $grey-color;
+    color: $grey;
     outline: none;
 
     &::after {
-      background-color: $grey-color;
+      background-color: $grey;
     }
   }
 
   &:focus {
-    color: $grey-color;
+    color: $grey;
 
     &::after {
-      background-color: $grey-color;
+      background-color: $grey;
     }
   }
 
   &:active {
-    color: $grey-color;
+    color: $grey;
 
     &::after {
-      background-color: $grey-color;
+      background-color: $grey;
     }
   }
 }

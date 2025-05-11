@@ -13,7 +13,7 @@
 
   width: 37px;
   height: 35px;
-  background-color: $accent-color;
+  background-color: $accent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,47 +22,47 @@
   transition: outline-color 0.3s, background-color 0.3s;
 
   &:hover {
-    background-color: $white-color;
-    outline-color: $active-link-color;
+    background-color: $white;
+    outline-color: $active-link;
 
     &::before {
-      background-color: $active-link-color;
+      background-color: $active-link;
     }
   }
 
   &:focus {
-    background-color: $white-color;
+    background-color: $white;
     outline: none;
 
     &::before {
-      background-color: $active-link-color;
+      background-color: $active-link;
     }
   }
 
   &:active {
-    background-color: $active-link-color;
+    background-color: $active-link;
 
     &::before {
-      background-color: $active-link-color;
+      background-color: $active-link;
     }
   }
 
   &:disabled {
-    background-color: $grey-color;
+    background-color: $grey;
     outline: none;
     cursor: default;
 
     &::before {
-      background-color: $white-color;
+      background-color: $white;
     }
   }
 
   &::before {
-    content: "";
+    content: '';
     width: 14px;
     height: 9px;
-    background-color: $white-color;
-    mask-image: url("../../img/sprite/arrow-icon.svg");
+    background-color: $white;
+    mask-image: url('../../img/sprite/arrow-icon.svg');
     mask-repeat: no-repeat;
     mask-size: cover;
     transition: background-color 0.3s;

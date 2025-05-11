@@ -11,7 +11,7 @@
   }
 
   &:focus {
-    outline-color: $white-color;
+    outline-color: $white;
   }
 
   &:active {
@@ -28,6 +28,6 @@
 
 .logo--dark {
   &:focus {
-    outline-color: $main-text-color;
+    outline-color: $main-text;
   }
 }

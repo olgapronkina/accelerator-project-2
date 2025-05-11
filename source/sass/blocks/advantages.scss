@@ -79,9 +79,9 @@
   text-align: center;
   gap: 20px;
   padding: 20px 10px;
-  outline: 1px solid $accent-color-01;
+  outline: 1px solid $accent-01;
   outline-offset: -1px;
-  background-color: $white-color;
+  background-color: $white;
 
   @media (min-width: $tablet-width) {
     padding: 30px 20px;
@@ -107,7 +107,7 @@
 .advantages__icon-wrapper {
   width: 42px;
   height: 42px;
-  outline: 1px solid $accent-color;
+  outline: 1px solid $accent;
   outline-offset: -1px;
   padding: 9px;
 
